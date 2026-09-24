@@ -11,6 +11,8 @@ body {
     justify-content: center;
     margin: 40px;
     font-size: 60px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 0 3px 9px rgba(0, 162, 255, 0.9);
 }
 
 .subtext {
@@ -36,6 +38,7 @@ body {
     justify-content: center;
     flex-direction: column;
     padding: 15px;
+    border-radius: 20px;
 }
 
 .message {
@@ -49,9 +52,48 @@ body {
     padding-bottom: 10px;
 }
 
-button {
+.paper,
+.rock,
+.scissors {
     height: 100px;
     width: 100px;
+}
+
+.rock {
+    background-image: url("https://st5.depositphotos.com/49897654/84195/p/450/depositphotos_841951300-stock-photo-cartoon-illustration-depicts-gray-rock.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px;
+    border-radius: 50px;
+    box-shadow: 0 0 60px rgba(0, 162, 255, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.paper {
+    background-image: url("https://images.emojiterra.com/google/android-10/512px/1f4c4.png");
+    background-size: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    box-shadow: 0 0 60px rgba(0, 162, 255, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scissors {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/023/985/123/non_2x/school-materials-clip-art-cartoon-scissors-free-png.png");
+    background-position: center;
+    background-size: 85px;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    box-shadow: 0 0 60px rgba(0, 162, 255, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scissors:hover,
+.paper:hover,
+.rock:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 60px rgba(0, 162, 255, 0.8);
 }
 
 .container {
@@ -59,4 +101,29 @@ button {
     justify-content: center;
     gap: 200px;
     margin-top: 70px;
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
+}
+
+.resetbtn {
+    margin-top: 60px;
+    height: 60px;
+    width: 180px;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(0, 162, 255, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+.resetbtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 60px rgba(0, 162, 255, 0.8);
+}
+
+.finalmsg {
+    color: red;
 }

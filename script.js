@@ -48,10 +48,24 @@ function endGame() {
         let finalMessage = document.createElement("p")
         finalMessage.textContent = `Game Over! You win with a final score of ${humanScore} - ${computerScore}!`
         message.prepend(finalMessage)
+        finalMessage.classList.add("finalmsg")
         
+        reset.innerHTML = ""
         let resetBtn = document.createElement("button")
         resetBtn.textContent = "Reset Game"
         reset.appendChild(resetBtn)
+        resetBtn.classList.add("resetbtn")
+
+        resetBtn.addEventListener("click", () => {
+            humanScore = 0
+            computerScore = 0
+            rock.disabled = false
+            paper.disabled = false
+            scissors.disabled = false
+            score.textContent = "Score: 0-0"
+            message.innerHTML = ""
+            reset.innerHTML = ""
+        })
 
         rock.disabled = true
         paper.disabled = true
@@ -60,10 +74,24 @@ function endGame() {
         let finalMessage = document.createElement("p")
         finalMessage.textContent = `Game Over! You lose with a final score of ${humanScore} - ${computerScore}!`
         message.prepend(finalMessage)
+        finalMessage.classList.add("finalmsg")
 
+        reset.innerHTML = ""
         let resetBtn = document.createElement("button")
         resetBtn.textContent = "Reset Game"
         reset.appendChild(resetBtn)
+        resetBtn.classList.add("resetbtn")
+
+        resetBtn.addEventListener("click", () => {
+            humanScore = 0
+            computerScore = 0
+            rock.disabled = false
+            paper.disabled = false
+            scissors.disabled = false
+            score.textContent = "Score: 0-0"
+            message.innerHTML = ""
+            reset.innerHTML = ""
+        })
 
         rock.disabled = true
         paper.disabled = true
